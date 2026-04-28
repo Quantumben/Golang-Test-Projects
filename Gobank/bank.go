@@ -3,11 +3,10 @@ package main
 import (
 	"fmt"
 	"example.com/bank/fileops"
+	"github.com/Pallinder/go-randomdata"
 )
 
 const accountBalanceFile = "balance.txt"
-
-
 
 func main() {
 	var accountBalance, err = fileops.GetFloatFromFile(accountBalanceFile)
@@ -17,9 +16,11 @@ func main() {
 		fmt.Println("==============")
 		// return
 		// panic(err) //we use return or panic to stop the execution of the program when we encounter an error, but panic will also print the stack trace which can be helpful for debugging
-		panic("Failed to get balance from file, exiting program")
+		// panic("Failed to get balance from file, exiting program")
 	}
+
 	fmt.Println("Welcome to Go Bank")
+	fmt.Println("Reach us 24/7", randomdata.PhoneNumber())
 
 	for {
 
