@@ -29,7 +29,8 @@ func main() {
 
 			if despositAmount <= 0 {
 				fmt.Println("Invalid amount, Must be greater than 0")
-				return //it stops the execution that no other code is been run
+				// return //it stops the execution that no other code is been run
+				continue //it stops the execution of current iteration and move to next iteration
 			}
 			accountBalance += despositAmount
 			fmt.Println("Balance updated! New amount ", accountBalance)
