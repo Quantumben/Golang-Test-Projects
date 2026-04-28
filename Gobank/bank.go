@@ -36,7 +36,8 @@ func main() {
 		fmt.Println(err)
 		fmt.Println("==============")
 		// return
-		panic(err) //we use return or panic to stop the execution of the program when we encounter an error, but panic will also print the stack trace which can be helpful for debugging
+		// panic(err) //we use return or panic to stop the execution of the program when we encounter an error, but panic will also print the stack trace which can be helpful for debugging
+		panic("Failed to get balance from file, exiting program")
 	}
 	fmt.Println("Welcome to Go Bank")
 
