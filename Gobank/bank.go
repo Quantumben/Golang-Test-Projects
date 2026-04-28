@@ -51,7 +51,9 @@ func main() {
 			fmt.Println("Your new balance: ", accountBalance)
 		} else {
 			fmt.Println("Goodbye! Dude")
+			break
 		}
 	}
 
+	fmt.Println("Thank you for using Go Bank")
 }
