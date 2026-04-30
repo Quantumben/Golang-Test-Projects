@@ -9,12 +9,12 @@ func main() {
 	agePointer = &age //pointer variable that holds the address of age variable
 
 	fmt.Println("Age", *agePointer)
-	// fmt.Println(&age)
 
 	adultYears := getAdultYears(agePointer)
 	fmt.Println(adultYears)
 }
 
 func getAdultYears(age *int) int {
-	return *age - 18
+	*age = *age - 18
+	return *age
 }
