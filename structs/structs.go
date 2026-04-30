@@ -14,7 +14,7 @@ func main() {
 
 	// ..... Do something awesome with that gathered data!
 
-	u, err := user.NewUser(userFirstName, userLastName, userBirthDate)
+	u, err := user.New(userFirstName, userLastName, userBirthDate)
 	if err != nil {
 		fmt.Println("Error creating user:", err)
 		return

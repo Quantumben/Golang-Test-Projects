@@ -24,7 +24,7 @@ func (u *User) ClearUserName() {
 }
 
 // Utility function to create a new user struct making it a pointer
-func NewUser(firstName, lastName, birthDate string) (*User, error) {
+func New(firstName, lastName, birthDate string) (*User, error) {
 	if firstName == "" || lastName == "" || birthDate == "" {
 		return nil, errors.New("all fields are required to create a user")
 	}
