@@ -22,9 +22,9 @@ func (u *user) clearUserName() {
 	u.lastName = ""
 }
 
-// Utility function to create a new user struct
-func newUser(firstName, lastName, birthDate string) user {
-	return user{
+// Utility function to create a new user struct making it a pointer
+func newUser(firstName, lastName, birthDate string) *user {
+	return &user{
 		firstName: firstName,
 		lastName:  lastName,
 		birthDate: birthDate,
