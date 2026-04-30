@@ -22,6 +22,16 @@ func (u *user) clearUserName() {
 	u.lastName = ""
 }
 
+// Utility function to create a new user struct
+func newUser(firstName, lastName, birthDate string) user {
+	return user{
+		firstName: firstName,
+		lastName:  lastName,
+		birthDate: birthDate,
+		createdAt: time.Now(),
+	} 
+}
+
 func main() {
 	userFirstName := getUserData("Please enter your first name: ")
 	userLastName := getUserData("Please enter your last name: ")
@@ -29,12 +39,7 @@ func main() {
 
 	// ..... Do something awesome with that gathered data!
 
-	u := user{
-		firstName: userFirstName,
-		lastName:  userLastName,
-		birthDate: userBirthDate,
-		createdAt: time.Now(), 
-	}
+	u := newUser(userFirstName, userLastName, userBirthDate)
 
 	u.outputUserDetails()
 	u.clearUserName()
